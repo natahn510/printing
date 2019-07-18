@@ -4,8 +4,43 @@
     <meta charset="utf-8">
     <title>Ahn Joosun</title>
     <link rel="stylesheet" href="style.css">
+  <script>
 
+  function nightdayhandler(self){
+      var target = document.querySelector('body');
 
+      if (this.value === 'night'){
+        target.style.backgroundColor='black';
+        target.style.color='white';
+        this.value = 'day';
+
+        var alist = document.querySelectorAll('a');
+        var i = 0;
+
+      while(i<alist.length){
+        alist[i].style.color = 'powderblue';
+        i=i+1;
+      }
+
+      }
+      else
+      {
+        target.style.backgroundColor='white';
+        target.style.color='black';
+        this.value = 'night';
+        document.querySelector('a').style.color='black';
+
+        var alist = document.querySelectorAll('a');
+        var i = 0;
+
+      while(i<alist.length){
+        alist[i].style.color = 'blue';
+        i=i+1;
+      }
+
+      }
+  }
+  </script>
   </head>
 
     <body>
@@ -18,52 +53,15 @@
       <li><a href="printing.html">PRINTING</a></li>
       <li><a href="photography.html">PHOTOGRAPHY</a></li>
     </ul>
+    <input id="day_night" type="button" value="night" onclick="
+        nightdayhandler(this);
+
+    ">
   </div>
   <div class="article">
     <p> Total Print Solution in KOREA</p>
+    <img src="offset.jpg" width="500px">
 
-<input id="day_night" type="button" value="night" onclick="
-var target = document.querySelector('body');
-
-if (this.value === 'night'){
-  target.style.backgroundColor='black';
-  target.style.color='white';
-  document.querySelector('a').style.backgroundColor='black';
-  document.querySelector('a').style.color='white';
-
-  this.value = 'day';
-}
-else
-{
-  target.backgroundColor='white';
-  target.style.color='black';
-  this.value = 'night';
-  document.querySelector('a').style.backgroundColor='white';
-  document.querySelector('a').style.color='black';
-}
-
-">
-<input id="day_night" type="button" value="night" onclick="
-var target = document.querySelector('body');
-
-if (this.value === 'night'){
-  target.style.backgroundColor='black';
-  target.style.color='white';
-  document.querySelector('a').style.backgroundColor='black';
-  document.querySelector('a').style.color='white';
-
-  this.value = 'day';
-}
-else
-{
-  target.backgroundColor='white';
-  target.style.color='black';
-  this.value = 'night';
-  document.querySelector('a').style.backgroundColor='white';
-  document.querySelector('a').style.color='black';
-}
-
-">
 
   </div>
 
