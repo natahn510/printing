@@ -2,56 +2,28 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Ahn Joosun</title>
+    <title>TOTAL PRINTING SERVICE IN KROEA </title>
     <link rel="stylesheet" href="style.css">
-  <script>
 
-  function nightdayhandler(self){
-      var target = document.querySelector('body');
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
-      if (this.value === 'night'){
-        target.style.backgroundColor='black';
-        target.style.color='white';
-        this.value = 'day';
+  <script src="colors.js">
 
-        var alist = document.querySelectorAll('a');
-        var i = 0;
-
-      while(i<alist.length){
-        alist[i].style.color = 'powderblue';
-        i=i+1;
-      }
-
-      }
-      else
-      {
-        target.style.backgroundColor='white';
-        target.style.color='black';
-        this.value = 'night';
-        document.querySelector('a').style.color='black';
-
-        var alist = document.querySelectorAll('a');
-        var i = 0;
-
-      while(i<alist.length){
-        alist[i].style.color = 'blue';
-        i=i+1;
-      }
-
-      }
-  }
   </script>
   </head>
 
     <body>
-  <h1> <a href="index.html">AHN JOOSUN </a></h1>
+  <img src="sunlogo.png" height="100px">
+  <h2> <a href="index.html">TOTAL PRINTING SERVICE IN KROEA </a></h1>
 
 <div id="grid">
   <div class="">
     <ul>
       <li><a href="profile.html">PORFILE</a></li>
       <li><a href="printing.html">PRINTING</a></li>
+      <li><a href="paper.html">PAPER</a></li>
       <li><a href="photography.html">PHOTOGRAPHY</a></li>
+
     </ul>
     <input id="day_night" type="button" value="night" onclick="
         nightdayhandler(this);
